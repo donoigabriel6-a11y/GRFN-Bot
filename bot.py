@@ -2,7 +2,10 @@ import discord
 from discord.ext import commands, tasks
 
 import os
-TOKEN = os.environ["MTQ0MzEwNjQ3MTk2MDEyMTM2NA.G04Dvb.wVGnEmukGdWEykRIqK8-rmTMZL7JRRrsG-dFzc"]
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+bot.run(TOKEN)
+
 GUILD_ID = 1428919783574999204
 CHANNEL_ID = 1443109090560708680  # ID of "Members: Loading"
 
@@ -37,4 +40,5 @@ async def update_member_count():
 
 
 bot.run(TOKEN)
+
 
